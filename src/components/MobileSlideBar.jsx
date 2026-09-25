@@ -79,7 +79,7 @@ export default function MobileSlideBar({
             <div className="slidebar-avatar">RT</div>
             <div className="slidebar-user-info">
               <span className="user-name">Rupesh Thakur</span>
-              <span className="farm-name">GreenValley Farm • Sector 4</span>
+              <span className="farm-name">GreenValley Farm â€¢ Sector 4</span>
             </div>
           </div>
           <button className="slidebar-close-btn" onClick={onClose} aria-label="Close menu">
@@ -96,7 +96,7 @@ export default function MobileSlideBar({
           <div className="gw-specs-grid">
             <div className="gw-spec-item">
               <Cpu size={13} />
-              <span>{gateway.cpuTempC || 43}°C CPU</span>
+              <span>{gateway.cpuTempC || 43}Â°C CPU</span>
             </div>
             <div className="gw-spec-item">
               <Wifi size={13} />

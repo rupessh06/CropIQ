@@ -79,7 +79,7 @@ export default function AIAdvisorPage({ data = {}, onPumpToggle }) {
               </span>
             </div>
             <span className="kpi-status-sub">
-              {environment.humidityPercent}% RH at {environment.temperatureC}°C
+              {environment.humidityPercent}% RH at {environment.temperatureC}Â°C
             </span>
           </div>
         </div>

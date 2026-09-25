@@ -125,16 +125,16 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
         {/* Agricultural Field Grid Lines & Crop Texture */}
         <div className="farm-cadastral-grid">
           <div className="field-parcel parcel-zone-a">
-            <span className="parcel-tag">Zone A • Tomato</span>
+            <span className="parcel-tag">Zone A â€¢ Tomato</span>
           </div>
           <div className="field-parcel parcel-zone-b">
-            <span className="parcel-tag">Zone B • Polyhouse</span>
+            <span className="parcel-tag">Zone B â€¢ Polyhouse</span>
           </div>
           <div className="field-parcel parcel-zone-c">
-            <span className="parcel-tag">Zone C • Orchard</span>
+            <span className="parcel-tag">Zone C â€¢ Orchard</span>
           </div>
           <div className="field-parcel parcel-zone-d">
-            <span className="parcel-tag">Zone D • Nursery</span>
+            <span className="parcel-tag">Zone D â€¢ Nursery</span>
           </div>
         </div>
 
@@ -191,7 +191,7 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
               <div className="marker-badge">
                 <span className="marker-val">
                   {activeLayer === "thermal"
-                    ? `${node.ambientTemp}°`
+                    ? `${node.ambientTemp}Â°`
                     : activeLayer === "ndvi"
                     ? (0.4 + (node.soilMoisture / 100) * 0.4).toFixed(2)
                     : `${Math.round(node.soilMoisture)}%`}
@@ -227,16 +227,16 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
           <>
             <div className="legend-label-col">
               <span className="legend-dot" style={{ background: "#06b6d4" }} />
-              <span>Cool 22°C</span>
+              <span>Cool 22Â°C</span>
             </div>
             <div className="legend-bar-thermal" />
             <div className="legend-label-col">
               <span className="legend-dot" style={{ background: "#eab308" }} />
-              <span>30°C</span>
+              <span>30Â°C</span>
             </div>
             <div className="legend-label-col">
               <span className="legend-dot" style={{ background: "#ef4444" }} />
-              <span>Heat Stress 36°C</span>
+              <span>Heat Stress 36Â°C</span>
             </div>
           </>
         )}
@@ -294,7 +294,7 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
                 </div>
                 <div className="zone-stat-col">
                   <span className="zone-stat-sub">Temp</span>
-                  <span className="zone-stat-num">{node.soilTemp}°C</span>
+                  <span className="zone-stat-num">{node.soilTemp}Â°C</span>
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
                 </div>
                 <h3>{selectedNode.name}</h3>
                 <span className="sheet-subtitle">
-                  {selectedNode.zone} • {selectedNode.crop}
+                  {selectedNode.zone} â€¢ {selectedNode.crop}
                 </span>
               </div>
               <button
@@ -342,7 +342,7 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
                   />
                 </div>
                 <span className="sheet-stat-sub">
-                  Target: 45-65% • {selectedNode.soilMoisture < 35 ? "Depleted" : "Healthy"}
+                  Target: 45-65% â€¢ {selectedNode.soilMoisture < 35 ? "Depleted" : "Healthy"}
                 </span>
               </div>
 
@@ -354,14 +354,14 @@ export default function FarmMap({ nodes = [], pump = {}, onPumpToggle, onRefresh
 
               <div className="sheet-stat-box">
                 <span className="sheet-stat-label">Soil Temperature</span>
-                <span className="sheet-stat-val">{selectedNode.soilTemp}°C</span>
+                <span className="sheet-stat-val">{selectedNode.soilTemp}Â°C</span>
                 <span className="sheet-stat-sub">Normal root zone</span>
               </div>
 
               <div className="sheet-stat-box">
                 <span className="sheet-stat-label">Air Temp / Humidity</span>
                 <span className="sheet-stat-val">
-                  {selectedNode.ambientTemp}°C / {selectedNode.ambientHumidity}%
+                  {selectedNode.ambientTemp}Â°C / {selectedNode.ambientHumidity}%
                 </span>
                 <span className="sheet-stat-sub">Microclimate sensor</span>
               </div>

@@ -96,7 +96,7 @@ export default function GatewayPage({ data = {}, onRefresh }) {
           <div className="gw-metrics-grid">
             <div className="gw-metric-box">
               <span className="gw-m-label"><Cpu size={14} /> CPU Temp</span>
-              <span className="gw-m-val">{gateway.cpuTempC || 43.2}°C</span>
+              <span className="gw-m-val">{gateway.cpuTempC || 43.2}Â°C</span>
               <span className="gw-m-sub">Thermal OK</span>
             </div>
 
@@ -140,7 +140,7 @@ export default function GatewayPage({ data = {}, onRefresh }) {
                 <div>
                   <div className="gw-node-name">{node.name} ({node.id})</div>
                   <div className="gw-node-meta">
-                    {node.zone} • {node.crop}
+                    {node.zone} â€¢ {node.crop}
                   </div>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function GatewayPage({ data = {}, onRefresh }) {
                 </div>
                 <div className="gw-reading-pill">
                   <span className="reading-label">Soil Temp</span>
-                  <span className="reading-val">{node.soilTemp}°C</span>
+                  <span className="reading-val">{node.soilTemp}Â°C</span>
                 </div>
                 <div className="gw-reading-pill">
                   <span className="reading-label">Battery</span>
@@ -183,7 +183,7 @@ export default function GatewayPage({ data = {}, onRefresh }) {
               <Flame size={20} className="text-red-500" />
               <div className="preset-info">
                 <span className="preset-name">Severe Drought</span>
-                <span className="preset-desc">Drops Zone A to 22%, temp to 36°C</span>
+                <span className="preset-desc">Drops Zone A to 22%, temp to 36Â°C</span>
               </div>
             </button>
 
